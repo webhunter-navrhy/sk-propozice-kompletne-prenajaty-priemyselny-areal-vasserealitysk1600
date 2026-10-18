@@ -1,0 +1,67 @@
+/* Jednotný vzhled: jedna typografická škála, dvousloupcové rozložení, bez obřího písma. */
+body.u{--g:clamp(20px,5vw,72px);font-family:var(--body);font-size:17px;line-height:1.65;color:var(--ink);background:#fff}
+.u-in{width:100%;max-width:1180px;margin-inline:auto;padding-inline:var(--g)}
+.u h1,.u h2,.u h3{font-family:var(--body);font-weight:600;letter-spacing:-.02em;color:var(--ink)}
+.u h2{font-size:clamp(26px,3vw,36px);line-height:1.15;margin-bottom:clamp(24px,3vw,40px)}
+.u h3{font-size:19px;line-height:1.3;margin:34px 0 10px}
+.u-logo-plate,.u-znacka{display:inline-flex;align-items:center;background:#fff;border-radius:8px;padding:6px 12px;box-shadow:0 1px 0 rgba(0,0,0,.06)}
+.u-znacka img{height:30px;width:auto;display:block}
+/* menu */
+.u-nav{position:fixed;inset:0 0 auto;z-index:20;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.u-nav__in{display:flex;align-items:center;gap:28px;max-width:1180px;margin:auto;padding:10px var(--g)}
+.u-nav .u-znacka{padding:0;box-shadow:none}
+.u-links{display:flex;gap:26px;margin-left:auto;font-size:15px;font-weight:500}
+.u-links a{text-decoration:none;color:var(--ink);padding:6px 0;border-bottom:2px solid transparent}
+.u-links a:hover{border-color:var(--accent)}
+.u-cta,.u-btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;font-weight:600;font-size:15px;line-height:1;padding:14px 22px;border-radius:999px;transition:background .2s}
+.u-cta:hover,.u-btn:hover{background:var(--accent-deep)}
+/* hero */
+.u-hero{position:relative;min-height:min(78svh,680px);display:flex;align-items:flex-end;color:#fff;overflow:hidden;background:#333}
+.u-hero__img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.u-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.25),rgba(0,0,0,.1) 35%,rgba(0,0,0,.72))}
+.u-hero__t{position:relative;z-index:1;width:100%;max-width:1180px;margin:auto;padding:120px var(--g) clamp(36px,5vw,64px)}
+.u-ey{font-size:15px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;opacity:.9;margin-bottom:10px}
+.u-hero h1{color:#fff;font-size:clamp(32px,5vw,56px);line-height:1.08;max-width:18ch;margin-bottom:18px}
+.u-hero__f{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:26px}
+.u-hero__f span{background:rgba(255,255,255,.18);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:7px 16px;font-weight:600;font-size:17px}
+/* sekce */
+.u-sek{padding:clamp(48px,7vw,96px) 0;scroll-margin-top:60px}
+.u-sek--alt{background:#f5f4f1}
+.u-dva{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:clamp(28px,5vw,72px);align-items:start}
+.u-text p+p{margin-top:1em}
+.u-fakta{list-style:none;margin:0;padding:0;border:1px solid var(--line);border-radius:12px;background:#fff}
+.u-fakta li{display:grid;grid-template-columns:110px 1fr;gap:4px 14px;align-items:baseline;padding:16px 20px;border-top:1px solid var(--line)}
+.u-fakta li:first-child{border-top:0}
+.u-fakta span{font-size:14px;color:var(--muted)}
+.u-fakta b{font-weight:600}
+.u-fakta li:first-child b{font-size:22px;color:var(--accent)}
+.u-fakta small{grid-column:2;color:var(--muted);font-size:13px;margin-top:-4px}
+/* galerie */
+.u-gal{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.u-g{position:relative;aspect-ratio:4/3;padding:0;border:0;border-radius:10px;overflow:hidden;cursor:zoom-in;background:#ddd}
+.u-g img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.u-g:hover img{transform:scale(1.03)}
+/* popis */
+.u-popis{max-width:760px}
+.u-popis h3:first-child{margin-top:0}
+.u-popis ul{margin:0 0 6px;padding-left:1.2em}
+.u-popis li{margin:7px 0;padding-left:4px}
+.u-popis li::marker{color:var(--accent)}
+.u-popis p{margin:10px 0}
+.u-popis .u-pozn{font-weight:600}
+/* mapa, parametry */
+.u .map{border-radius:12px}
+.u .params{grid-template-columns:repeat(2,minmax(0,1fr))}
+.u .params div{font-size:16px}
+/* kontakt */
+.u-k{display:flex;gap:clamp(20px,4vw,48px);align-items:center;flex-wrap:wrap}
+.u-k__f{width:150px;height:155px;object-fit:cover;border-radius:12px}
+.u-k__jm{font-size:22px;font-weight:600}
+.u-k__l{display:flex;gap:6px 24px;flex-wrap:wrap;margin:10px 0 22px}
+.u-k__l a{font-weight:500}
+/* patička: stejné logo jako jinde */
+.u-pata{background:#f5f4f1;border-top:1px solid var(--line);padding:30px 0 40px;font-size:14px;color:var(--muted)}
+.u-pata__in{display:flex;gap:24px;align-items:center}
+.u-pata .u-znacka{flex:none;padding:0}
+@media(max-width:860px){.u-links{display:none}.u-cta{margin-left:auto;padding:12px 16px;font-size:14px}.u-dva{grid-template-columns:1fr}.u-pata__in{flex-direction:column;align-items:flex-start}.u .params{grid-template-columns:1fr}}
+@media(max-width:520px){body.u{font-size:16px}.u-gal{gap:8px}.u-znacka img{height:26px}.u-fakta li{grid-template-columns:90px 1fr}.u-hero{min-height:70svh}.u-pata{padding-bottom:100px}}
